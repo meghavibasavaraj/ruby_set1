@@ -3,3 +3,13 @@
 # If the file does not open or cannot be read, raise an exception with appropraite message.
 
 # P.S - You do not have to create a file through the code. Keep a file ready with some contents.
+
+begin
+    a=File.open("README.md","r")
+    puts a.sysread(10)
+    a=File.open("README1.md","r")
+    puts a.sysread(10)
+rescue Exception => e
+   puts e.message
+end
+
